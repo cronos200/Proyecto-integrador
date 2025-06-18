@@ -5,7 +5,7 @@ import { alerta } from "../helpers/funciones";
 import "../pages/Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState(""); // antes: usuario
+  const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const Login = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ email, password }), // ← ya no está comentado y usa email
+        body: JSON.stringify({ email, password }), 
       });
 
       if (!response.ok) throw new Error("Error en la autenticación");
